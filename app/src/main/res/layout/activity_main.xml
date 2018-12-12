@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/buttonGetLocation"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonScan"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:layout_marginRight="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event ID"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textViewEventID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="none"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="13dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Name"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textViewEventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="none"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="13dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organizer"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textViewOrganizer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="none"
+            android:layout_weight="1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Location"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textViewEventAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="none"
+            android:layout_weight="1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event PIC Email"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textViewPicEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="none"
+            android:layout_weight="1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event PIC Phone"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textViewEventPICPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="none"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="13dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonGetLocation"
+        android:layout_width="130dp"
+        android:textSize="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/zxing_custom_result_view"
+        android:text=" Get Your Location "
+        android:textColor="#ffff" />
+
+    <TextView
+        android:id="@+id/textViewUserLocation"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@id/LinearLayout"
+        android:layout_below="@id/buttonGetLocation"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:text="none"
+        android:textSize="14dp" />
+    <Button
+        android:id="@+id/buttonScan"
+        android:layout_above="@id/buttonSubmit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Scan QR Code"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/buttonScanAbsent"
+        android:layout_alignBaseline="@id/buttonScan"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/buttonScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#b642f4"
+        android:text="Scan QR Code Absent" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/zxing_custom_viewfinder_laser"
+        android:text="Submit and Register"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/LinearLayout"
+        android:layout_below="@+id/textViewUserLocation"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="Your Biodata" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:textColor="#2a60b7"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/LinearLayout"
+        android:layout_below="@id/textView12"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="TextView"
+        android:layout_marginRight="15dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:textColor="#1a774f"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_below="@id/textView"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/LinearLayout"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginRight="15dp"
+        android:text="TextView"
+        android:layout_alignLeft="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_marginBottom="10dp"
+        android:textColor="#633f1a"
+        android:layout_width="match_parent"
+        android:layout_below="@id/textView9"
+        android:layout_height="70dp"
+        android:padding="7dp"
+        android:layout_toLeftOf="@id/LinearLayout"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/textView8"
+        android:textColor="#400d54"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/textView7"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/LinearLayout"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginRight="15dp"
+        android:text="TextView"
+        android:layout_alignLeft="@+id/textView" />
+    <TextView
+        android:id="@+id/textView10"
+        android:textColor="#820f15"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/textView8"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/LinearLayout"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_alignStart="@+id/textView"
+        android:text="TextView"
+        android:layout_alignLeft="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:textColor="#161616"
+        android:layout_below="@id/textView10"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/LinearLayout"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:text="TextView"
+        android:layout_marginRight="15dp"
+        android:layout_alignLeft="@+id/textView" />
+
+</RelativeLayout>

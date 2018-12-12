@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonScan"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="#910b45"
+        android:gravity="center"
+        android:fontFamily="cursive"
+        android:text="Scan Below To Absent Now" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_toRightOf="@id/textView13"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="30dp"
+        android:layout_height="100dp"
+        app:srcCompat="@mipmap/logo" />
+    <Button
+        android:id="@+id/buttonScans"
+        android:layout_below="@id/textViewHadir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan QR Absent Now"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="10dp"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/textViewHadir"
+        android:layout_below="@id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="Absence Status : TIDAK ADA" />
+
+    <Button
+        android:id="@+id/buttonLoc"
+        android:layout_alignBaseline="@id/tvLoc"
+        android:layout_below="@id/buttonScans"
+        android:layout_width="wrap_content"
+        android:textSize="15dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_alignTop="@+id/tvLoc"
+        android:background="#32c94b"
+        android:padding="10dp"
+        android:text="Get Absence Location" />
+
+    <TextView
+        android:id="@+id/tvLoc"
+        android:background="@drawable/border"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/buttonScans"
+        android:layout_toRightOf="@id/buttonLoc"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="120dp"
+        android:text="None" />
+
+</RelativeLayout>
